@@ -76,12 +76,12 @@ public class RobotMap {
             this.direction = direction;
         }
 
-        public void move() {
+        public void move(int steps) {
             Point newPoint = switch (direction) {
-                case TOP -> new Point(point.x() - 1, point.y());
-                case RIGHT -> new Point(point.x(), point.y() + 1);
-                case BOTTOM -> new Point(point.x() + 1, point.y());
-                case LEFT -> new Point(point.x(), point.y() - 1);
+                case TOP -> new Point(point.x() - steps, point.y());
+                case RIGHT -> new Point(point.x(), point.y() + steps);
+                case BOTTOM -> new Point(point.x() + steps, point.y());
+                case LEFT -> new Point(point.x(), point.y() - steps);
             };
             validatePoint(newPoint);
 

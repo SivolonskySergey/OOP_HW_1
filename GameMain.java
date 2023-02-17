@@ -33,26 +33,29 @@ public class GameMain {
 
     RobotMap.Robot robot = map.createRobot(new Point(5, 5));
     RobotMap.Robot robot1 = map.createRobot(new Point(1, 2));
-    RobotMap.Robot robot2 = map.createRobot(new Point(3, 3));
-    RobotMap.Robot robot3 = map.createRobot(new Point(4, 5));
-    RobotMap.Robot robot4 = map.createRobot(new Point(2, 1));
-    RobotMap.Robot robot5 = map.createRobot(new Point(3, 1));
-    RobotMap.Robot robot6 = map.createRobot(new Point(3, 4));
-    RobotMap.Robot robot7 = map.createRobot(new Point(1, 5));
+    // RobotMap.Robot robot2 = map.createRobot(new Point(3, 3));
+    // RobotMap.Robot robot3 = map.createRobot(new Point(4, 5));
+    // RobotMap.Robot robot4 = map.createRobot(new Point(2, 1));
+    // RobotMap.Robot robot5 = map.createRobot(new Point(3, 1));
+    // RobotMap.Robot robot6 = map.createRobot(new Point(3, 4));
+    // RobotMap.Robot robot7 = map.createRobot(new Point(1, 5));
     System.out.println(robot); // [2, 3], [TOP]
-    robot.move();
-    robot.move();
-    robot.move();
-    robot.move();
-    robot.move();
-    System.out.println(robot); // [1, 3], [TOP]
-    robot.changeDirection(Direction.BOTTOM);
-    robot.move();
-    // robot.move(5);
-    robot.move(); // [3, 3], [BOTTOM]
+    robot.move(2);
+    robot.move(1);
     robot.changeDirection(Direction.LEFT);
-    robot.move();
-    System.out.println(robot); // [3, 2], [LEFT]
+    robot.move(3);
+    robot.move(4);
+    // robot.move();
+    // robot.move();
+    // robot.move();
+    // System.out.println(robot); // [1, 3], [TOP]
+    // robot.changeDirection(Direction.BOTTOM);
+    // robot.move();
+    // // robot.move(5);
+    // robot.move(); // [3, 3], [BOTTOM]
+    // robot.changeDirection(Direction.LEFT);
+    // robot.move();
+    // System.out.println(robot); // [3, 2], [LEFT]
 
     System.out.println(map.robots.size());
   }
